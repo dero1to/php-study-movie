@@ -2,9 +2,7 @@ import './tailwind.css';
 import { Composition } from "remotion";
 import { PhpLogo } from "./PhpStudyMovie/Logo";
 import { Title } from "./PhpStudyMovie/Title";
-import { Movie } from "./PhpStudyMovie/Movie";
-
-// Each <Composition> is an entry in the sidebar!
+import { Movie, movieSchema } from "./PhpStudyMovie/Movie";
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -16,6 +14,8 @@ export const RemotionRoot: React.FC = () => {
         fps={30}
         width={1920}
         height={1080}
+        schema={movieSchema}
+        defaultProps={{ eventNumber: 170 }}
       />
       <Composition
         id="PhpLogo"
